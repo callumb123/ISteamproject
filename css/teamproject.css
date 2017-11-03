@@ -1,3 +1,8 @@
 #map{
   height: 400px;
 }
+
+#title{
+  background-color: #f26091;
+  padding: 1px;
+}
