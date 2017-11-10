@@ -1,14 +1,10 @@
 function initMap(){
-  var uluru = {lat: 46.003257147967815399169921875, lng: 8.95168307237327098846435546875};
-  var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 14,
-		center: uluru
-		});
   var totalDistance = 0;
   var totalElevation = 0;
   var elevations = [];
   var allDates = [];
   var allTimes = [];
+  var allPoints = [];
   $.ajax({
     url: "xml/running.gpx",
     dataType: "xml",
@@ -24,11 +20,7 @@ function initMap(){
 		currentLat = parseFloat(currentLat);
 		currentLon = parseFloat(currentLon);
 		var point = {lat: currentLat, lng: currentLon};
-		var marker = new google.maps.Marker({
-				position: point,
-				map: map
-				});
-		marker.setMap(map);
+		allPoints.push(point);
 		if(pointNumber > 1){
 			totalDistance += distance(currentLat, currentLon, previousLat, previousLon);
 		}
@@ -74,12 +66,43 @@ function initMap(){
 	var numberOfHours = numberOfMinutes/60 + hh;
 	$("#averageSpeed").append((parseFloat(totalDistance)/parseFloat(numberOfHours)).toFixed(2) + " mph");
 
+	var uluru = {lat: allPoints[0]["lat"], lng: allPoints[0]["lng"]};
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 14,
+		center: uluru
+		});
+
+	for(var i = 0; i < allPoints.length; i++){
+		if(i == 0) var label = "Start";
+		else var label = "End";
+		var marker = new google.maps.Marker({
+				position: allPoints[i],
+				label: label,
+				map: map
+				});
+
+		marker.setMap(map);
+		i += (allPoints.length-2);
+	}
+
+
+	var runningPath = new google.maps.Polyline({
+	  path: allPoints,
+	  geodesic: true,
+	  strokeColor: '#FF0000',
+	  strokeOpacity: 1.0,
+	  strokeWeight: 2
+	});
+
+	runningPath.setMap(map);
+
     },
     error: function(){
 	$('#name').text("Failed");
     }
 
   });
+
 
 };
 
