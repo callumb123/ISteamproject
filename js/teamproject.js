@@ -94,10 +94,24 @@ function initMap(){
 		});
 
 	for(var i = 0; i < allPoints.length; i++){
-		if(i == 0) var label = "Start";
-		else var label = "End";
+		if(i == 0){
+			var label = "Start";
+			var color = "green";
+		}
+		else{
+			var label = "End";
+			var color = "red";
+		}
 		var marker = new google.maps.Marker({
 				position: allPoints[i],
+				icon: {
+        				path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+					fillColor: color,
+					fillOpacity: 1,
+        				strokeColor: "black",
+					strokeWeight: 2,
+        				scale: 4
+    				},
 				label: label,
 				map: map
 				});
