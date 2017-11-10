@@ -1,10 +1,14 @@
 function initMap(){
   var totalDistance = 0;
   var totalElevation = 0;
+  var totalHeartrate = 0;
+  var totalCadence = 0;
   var elevations = [];
   var allDates = [];
   var allTimes = [];
   var allPoints = [];
+  var allHeartrates = [];
+  var allCadence = [];
   $.ajax({
     url: "xml/running.gpx",
     dataType: "xml",
@@ -24,6 +28,15 @@ function initMap(){
 		if(pointNumber > 1){
 			totalDistance += distance(currentLat, currentLon, previousLat, previousLon);
 		}
+		var extension = $(this).find('extensions').text();
+		var heartrate = extension.match(/[-+]?(\d*\.?\d+)/g)[0];
+		var cadence = extension.match(/[-+]?(\d*\.?\d+)/g)[1];
+
+		totalHeartrate += parseInt(heartrate);
+		totalCadence += parseInt(cadence);
+
+		allHeartrates.push(heartrate);
+		allCadence.push(cadence);
 
 		previousLat = currentLat;
 		previousLon = currentLon;
@@ -45,6 +58,14 @@ function initMap(){
 	$("#highestPoint").append(Math.max(...elevations).toFixed(2) + " feet");
 	$("#lowestPoint").append(Math.min(...elevations).toFixed(2) + " feet");
 	$("#averageElevation").append((totalElevation/elevations.length).toFixed(2) + " feet");
+
+	$("#highestHeartrate").append(Math.max(...allHeartrates).toFixed(0) + " beats per minute");
+	$("#lowestHeartrate").append(Math.min(...allHeartrates).toFixed(0) + " beats per minute");
+	$("#averageHeartrate").append((totalHeartrate/allHeartrates.length).toFixed(0) + " beats per minute");
+
+	$("#highestCadence").append(Math.max(...allCadence).toFixed(0) + " steps per minute");
+	$("#averageCadence").append((totalCadence/allCadence.length).toFixed(0) + " steps per minute");
+
 
 	var timeStart = new Date(allDates[0] + " " + allTimes[0]);
 	var timeEnd = new Date(allDates[allDates.length-1] + " " + allTimes[allTimes.length-1]);
