@@ -128,7 +128,6 @@ function initMap(allPoints){
 }
 
 
-
 // Displays the highest, lowest and average heartrate from the data
 function displayHeartrate(allHeartrates, totalHeartrate){
 	$("#highestHeartrate").append(Math.max(...allHeartrates).toFixed(0) + " beats per minute");
