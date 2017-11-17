@@ -86,7 +86,7 @@ function parseFile(file){
 function initMap(allPoints){
 	var uluru = {lat: allPoints[0]["lat"], lng: allPoints[0]["lng"]};
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 13,
+		zoom: 14,
 		center: uluru
 		});
 
