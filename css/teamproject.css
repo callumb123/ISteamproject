@@ -15,12 +15,11 @@
 }
 
 #navBar button{
-	font-size: 1.7em;
-	width: 10em;
+	font-size: 150%;
+	width: 100%;
 }
 
 #navBar button:hover{
-	font-size: 1.7em;
 	background-color: #fc4f46;
 }
 
