@@ -28,6 +28,7 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+    border: #fc4f46 solid;
 	border-style: outset;
 	font-size: 1.5em;
 }
@@ -37,6 +38,7 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+    border: #fc4f46 solid;
 	border-style: outset;
 	font-size: 1.5em;
 }
@@ -46,6 +48,7 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+    border: #fc4f46 solid;
 	border-style: outset;
 	font-size: 1.5em;
 }
@@ -55,6 +58,7 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+    border: #fc4f46 solid;
 	border-style: outset;
 	font-size: 1.5em;
 }
@@ -63,6 +67,8 @@
 	border-style: outset;
 	margin-top: 1em;
 	margin-bottom: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
 	padding: 1em;
 }
 
@@ -147,4 +153,8 @@ opacity: 1;
 
 .smallSpace{
 	height: 7vh;
+}
+
+.tinySpace{
+	height: 3vh;
 }
