@@ -6,3 +6,72 @@
   background-color: #f26091;
   padding: 1px;
 }
+
+.text-main{
+	font-size:3em;
+	color: white;
+	font-family: 'Cantarell', sans-serif;
+	text-shadow: 1px 3px 2px #5bc0de;
+}
+
+.text{
+	font-size:2em;
+	color: white;
+	font-family: 'Cantarell', sans-serif;
+	padding: 3vh; 
+}
+
+.main {
+    background-image: url("http://thebestrunningshoes.info/wp-content/uploads/2016/05/best-stability-running-shoes.jpg");
+    background-color: #cccccc;
+	background-size: 100% 120%;
+	border-radius: 10px; 
+	text-align: center; 
+	height: 70vh; 
+	margin: 2vw; 
+	padding-top: 15vh;	
+	cursor: cursor;
+	position: relative;
+}
+
+.main span{
+	position: absolute;
+	top:0;
+	left:0;
+	background:url("https://www.networkcomputing.com/sites/default/files/resources/nwc/network%20opt.jpg");
+	opacity: 0;
+	background-size: 100% 120%;
+	border-radius: 10px; 
+	text-align: center; 
+	height: 70vh; 
+	width: 100%;
+	margin: 0; 
+	padding-top: 15vh;	
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	animation-direction: alternate;
+}
+
+  @keyframes cf3FadeInOut {
+  0% {
+  opacity:1;
+}
+15% {
+opacity:1;
+}
+85% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+.main span:hover{
+opacity: 1;
+}
+.space {
+	height: 14vh;
+}
