@@ -16,6 +16,7 @@
 
 #navBar button{
 	font-size: 1.7em;
+	width: 10em;
 }
 
 #navBar button:hover{
