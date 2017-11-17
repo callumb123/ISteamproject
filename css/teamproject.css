@@ -1,13 +1,27 @@
 #map{
-  height: 400px;
+  height: 20em;
 }
 
 #title{
 	font-family: 'Cantarell', sans-serif;
 	font-size: 6.5em;
 	padding-left:0.5em;
-	color: #b8d0f9;
-	text-shadow: 1px 3px 2px #000000
+	color: #fc4f46;
+	text-shadow: 1px 3px 2px black;
+}
+
+#navBar button{
+	font-size: 1.7em; 
+}
+
+#navBar button:hover{
+	font-size: 1.7em;
+	background-color: #fc4f46;
+}
+
+#navBar button:active{
+	font-size: 1.7em;
+	background-color: #fc4f46;
 }
 
 #firstRowStats div{
@@ -46,18 +60,27 @@
 	font-size: 1.5em;
 }
 
+.activityListObject{
+	border-style: outset;
+}
+
+.bg-primary{
+	background-color: #fc4f46;
+}
+
 .text-main{
 	font-size:3em;
-	color: white;
+	color: #fc4f46;
 	font-family: 'Cantarell', sans-serif;
-	text-shadow: 1px 3px 2px #5bc0de;
+	text-shadow: 1px 3px 2px black;
 }
 
 .text{
 	font-size:2em;
 	color: white;
 	font-family: 'Cantarell', sans-serif;
-	padding: 3vh; 
+	padding: 3vh;
+	background-color: #fc4f46;
 }
 
 .main {
