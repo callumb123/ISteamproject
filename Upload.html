@@ -6,27 +6,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/teamproject.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="js/teamproject.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpCk_fXWqh_nWBuE-nROGDxPeDHaRT_dQ&callback=initMap">
+		</script>
 	</head>
 	<body>
 
-		<div class="container-fluid">
-		<div id="title">
-		  <h1>Fitter Bit</h1>
-		  <h3><small>Stay Fit. Stay Healthy.</small></h3>
+		<div class="smallSpace"></div>
+
+		<div class="container-fluid text-center" id="navBar">
+			<p id="title" class="col-md-2">Fitter Bit</p>
+			<div>
+			<a class="col-md-2" href="testHome.html"><button type="button" class="btn btn-default active">Home</button></a>
+			<a class="col-md-2" href="MostRecent.html"><button type="button" class="btn btn-default">Most Recent</button></a>
+		    <a class="col-md-2" href="YourActivities.html"><button type="button" class="btn btn-default">Your Activities</button></a>
+		    <a class="col-md-2" href="FriendsActivities.html"><button type="button" class="btn btn-default">Friends Activities</button></a>
+		    <a class="col-md-2" href="YourStats.html"><button type="button" class="btn btn-default">Your Stats</button></a>
+			</div>
 		</div>
-		 <div class="row">
-		  <div class="col-sm-2">
-		    <ul class="nav nav-pills nav-stacked" role="tablist">
-              <li class="active"><a href="Upload.html">Upload</a></li>
-		      <li><a href="MostRecent.html">Most Recent</a></li>
-		      <li><a href="AllActivities.html">All Activities</a></li>
-		      <li><a href="FriendsActivities.html">Friends Activities</a></li>
-		      <li><a href="YourStats.html">Your Stats</a></li>
-		    </ul>
-		  </div>
-		 </div>
-		</div>
-		</body>
+
+		<div class="smallSpace"></div>
+
+		<div class="space"></div>
+
+	</body>
 </html>
