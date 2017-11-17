@@ -6,8 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/teamproject.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="js/teamproject.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpCk_fXWqh_nWBuE-nROGDxPeDHaRT_dQ&callback=initMap">
+		</script>
 	</head>
 	<body>
 
@@ -18,13 +22,14 @@
 
 		<div class="container-fluid text-center" id="navBar">
 			<a class="col-md-3" href="testHome.html"><button type="button" class="btn btn-default" style ="font-size: 1.7em;">Home</button></a>
-		      	<a class="col-md-3" href="YourActivities.html"><button type="button" class="btn btn-default" style ="font-size: 1.7em;">Your Activities</button></a>
+		      	<a class="col-md-3" href="YourActivities.html"><button type="button" class="btn btn-default active" style ="font-size: 1.7em;">Your Activities</button></a>
 		      	<a class="col-md-3" href="FriendsActivities.html"><button type="button" class="btn btn-default" style ="font-size: 1.7em;">Friends Activities</button></a>
-		      	<a class="col-md-3" href="YourStats.html"><button type="button" class="btn btn-default active" style ="font-size: 1.7em;">Your Stats</button></a>
+		      	<a class="col-md-3" href="YourStats.html"><button type="button" class="btn btn-default" style ="font-size: 1.7em;">Your Stats</button></a>
 		</div>
 
 		<div class="smallSpace"></div>
 
+		<div id="map"></div>
 
 		<div class="row text-center" id="firstRowStats">
 			<div class="col-md-4" id="distanceTravelled">Distance: </div>
@@ -52,5 +57,6 @@
 		</div>
 
 		<div class="space"></div>
+
 	</body>
 </html>
