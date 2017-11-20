@@ -35,15 +35,17 @@ function parseFile(file){
 		if(pointNumber > 1){
 			totalDistance += distance(currentLat, currentLon, previousLat, previousLon);
 		}
-		var extension = $(this).find('extensions').text();
-		var heartrate = extension.match(/[-+]?(\d*\.?\d+)/g)[0];
-		var cadence = extension.match(/[-+]?(\d*\.?\d+)/g)[1];
+		if($(this).find('extensions').length > 0){
+			var extension = $(this).find('extensions').text();
+			var heartrate = extension.match(/[-+]?(\d*\.?\d+)/g)[0];
+			var cadence = extension.match(/[-+]?(\d*\.?\d+)/g)[1];
 
-		totalHeartrate += parseInt(heartrate);
-		totalCadence += parseInt(cadence);
+			totalHeartrate += parseInt(heartrate);
+			totalCadence += parseInt(cadence);
 
-		allHeartrates.push(heartrate);
-		allCadence.push(cadence);
+			allHeartrates.push(heartrate);
+			allCadence.push(cadence);
+		}
 
 		previousLat = currentLat;
 		previousLon = currentLon;
@@ -62,10 +64,10 @@ function parseFile(file){
 		allTimes.push(actualTime);		
 	});
 
-	displayHeartrate(allHeartrates, totalHeartrate);
+	if(totalHeartrate > 0) displayHeartrate(allHeartrates, totalHeartrate);
 	displayDistance(totalDistance);
 	displayElevation(elevations, totalElevation)
-	displayCadence(allCadence, totalCadence)
+	if(totalCadence > 0) displayCadence(allCadence, totalCadence)
 	var time = calculateTimes(allDates, allTimes)
 	displaySpeed(time[0], time[1], time[2], totalDistance);
 	initMap(allPoints);
