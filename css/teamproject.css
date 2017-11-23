@@ -188,3 +188,22 @@ opacity: 1;
 .tinySpace{
 	height: 3vh;
 }
+
+.inputfile {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label{
+	font-size: 150%;
+	color: #fc4f46;
+	background-color: white;
+}
+
+.inputfile + label:hover{
+	background-color: #fc4f46;
+	color: white;
+}
+
