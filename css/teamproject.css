@@ -2,6 +2,10 @@
   height: 20em;
 }
 
+body{
+	background-color: #ffdddb;
+}
+
 #title{
 	font-family: 'Cantarell', sans-serif;
 	font-size: 3.0em;
@@ -17,20 +21,26 @@
 #navBar button{
 	font-size: 150%;
 	width: 100%;
+	color: #fc4f46;
 }
 
 #navBar button:hover{
 	background-color: #fc4f46;
+	color: white;
 }
+
 
 #firstRowStats div{
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: #fc4f46 solid;
+    	border: black solid;
 	border-style: outset;
 	font-size: 1.5em;
+	background-color: white;
+	color: #fc4f46;
+	font-weight: bold;
 }
 
 #secondRowStats div{
@@ -38,9 +48,12 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: #fc4f46 solid;
+    	border: black solid;
 	border-style: outset;
 	font-size: 1.5em;
+	background-color: white;
+	color: #fc4f46;
+	font-weight: bold;
 }
 
 #thirdRowStats div{
@@ -48,9 +61,12 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: #fc4f46 solid;
+    	border: black solid;
 	border-style: outset;
 	font-size: 1.5em;
+	background-color: white;
+	color: #fc4f46;
+	font-weight: bold;
 }
 
 #fourthRowStats div{
@@ -58,18 +74,22 @@
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: #fc4f46 solid;
+    	border: black solid;
 	border-style: outset;
 	font-size: 1.5em;
+	background-color: white;
+	color: #fc4f46;
+	font-weight: bold;
 }
 
 .activityListObject{
-    	border: #fc4f46 outset;
+    	border: black outset;
 	margin-top: 1em;
 	margin-bottom: 1em;
     	margin-left: 5em;
     	margin-right: 5em;
 	padding: 1em;
+	background-color:white;
 }
 
 .activityListObject img{
@@ -81,7 +101,10 @@
 	margin-bottom: 2em;
 	font-size: 1.5em;
 	padding-top: 1em;
-    	border: #fc4f46 dotted;
+    	border: black outset;
+	background-color: white;
+	color: #fc4f46;
+	font-weight: bold;
 }
 
 .bg-primary{
