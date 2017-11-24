@@ -35,7 +35,7 @@ body{
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: black solid;
+    border: black solid;
 	border-style: outset;
 	font-size: 1.5em;
 	background-color: white;
@@ -206,4 +206,3 @@ opacity: 1;
 	background-color: #fc4f46;
 	color: white;
 }
-
