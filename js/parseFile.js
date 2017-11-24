@@ -21,7 +21,7 @@ function parseFile(file){
     dataType: "xml",
     success: function(data){
 	var name = $(data).find('trk name').text();
-  	$("#name").append(name);
+  	$("#name").append('<u>' + name + '</u>');
 	var pointNumber = 1;
 	var previousLat;
 	var previousLon;
@@ -61,7 +61,7 @@ function parseFile(file){
 		var date = currentTime.substring(0,10);
 		allDates.push(date);
 		var actualTime = currentTime.substring(11,19);
-		allTimes.push(actualTime);		
+		allTimes.push(actualTime);
 	});
 
 	if(totalHeartrate > 0) displayHeartrate(allHeartrates, totalHeartrate);
@@ -82,7 +82,7 @@ function parseFile(file){
 
 
 /* Creates the map to display the given route (via the points passed to the function).
-   Centres the map on the starting position of the route, 
+   Centres the map on the starting position of the route,
     and plots markers for the start and end.
 */
 function initMap(allPoints){
