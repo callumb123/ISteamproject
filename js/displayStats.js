@@ -1,27 +1,27 @@
 // Displays the highest, lowest and average heartrate from the data
 function displayHeartrate(allHeartrates, totalHeartrate){
-	$("#highestHeartrate").append(Math.max(...allHeartrates).toFixed(0) + " beats per minute");
-	$("#lowestHeartrate").append(Math.min(...allHeartrates).toFixed(0) + " beats per minute");
-	$("#averageHeartrate").append((totalHeartrate/allHeartrates.length).toFixed(0) + " beats per minute");
+	$("#highestHeartrate").html("Highest heart rate recorded: <br/>" + Math.max(...allHeartrates).toFixed(0) + " beats per minute");
+	$("#lowestHeartrate").html("Lowest heart rate recorded: <br/>" + Math.min(...allHeartrates).toFixed(0) + " beats per minute");
+	$("#averageHeartrate").html("Average heart rate: <br/>" + (totalHeartrate/allHeartrates.length).toFixed(0) + " beats per minute");
 }
 
 // Displays the total distance covered
 function displayDistance(totalDistance){
-	$("#distanceTravelled").append(totalDistance.toFixed(2) + " miles");
+	$("#distanceTravelled").html("Distance traveled: <br/>" + totalDistance.toFixed(2) + " miles");
 }
 
 // Displays the highest, lowest and average elevation from the current circuit
 function displayElevation(elevations, totalElevation){
-	$("#highestPoint").append(Math.max(...elevations).toFixed(2) + " feet");
-	$("#lowestPoint").append(Math.min(...elevations).toFixed(2) + " feet");
-	$("#averageElevation").append((totalElevation/elevations.length).toFixed(2) + " feet");
+	$("#highestPoint").html("Highest point: <br/>" + Math.max(...elevations).toFixed(2) + " feet");
+	$("#lowestPoint").html("Lowest point: <br/>" + Math.min(...elevations).toFixed(2) + " feet");
+	$("#averageElevation").html("Average elevation: <br/>" + (totalElevation/elevations.length).toFixed(2) + " feet");
 }
 
 
 // Displays the highest and average cadence from the gpx file
 function displayCadence(allCadence, totalCadence){
-	$("#highestCadence").append(Math.max(...allCadence).toFixed(0) + " steps per minute");
-	$("#averageCadence").append((totalCadence/allCadence.length).toFixed(0) + " steps per minute");
+	$("#highestCadence").html("Highest cadence: <br/>" + Math.max(...allCadence).toFixed(0) + " steps per minute");
+	$("#averageCadence").html("Average cadence: <br/>" + (totalCadence/allCadence.length).toFixed(0) + " steps per minute");
 }
 
 
@@ -29,7 +29,7 @@ function displayCadence(allCadence, totalCadence){
 function displaySpeed(hh, mm, ss, totalDistance){
 	var numberOfMinutes = parseFloat(ss/60) + mm;
 	var numberOfHours = numberOfMinutes/60 + hh;
-	$("#averageSpeed").append((parseFloat(totalDistance)/parseFloat(numberOfHours)).toFixed(2) + " mph");
+	$("#averageSpeed").html("Average speed: <br/>" + (parseFloat(totalDistance)/parseFloat(numberOfHours)).toFixed(2) + " mph");
 }
 
 
@@ -50,9 +50,9 @@ function calculateTimes(allDates, allTimes){
 	var ss = Math.floor(msec / 1000);
 	msec -= ss * 1000;
 
-	$("#startTime").append(allTimes[0] + " (" + allDates[0] + ")");
-	$("#endTime").append(allTimes[allDates.length-1] + " (" + allDates[allDates.length-1] + ")");
-	$("#timeTaken").append(hh + ":" + mm + ":" + ss);
+	$("#startTime").html("Start time: <br/>" + allTimes[0] + " (" + allDates[0] + ")");
+	$("#endTime").html("End time: <br/>" + allTimes[allDates.length-1] + " (" + allDates[allDates.length-1] + ")");
+	$("#timeTaken").html("Time elapsed: <br/>" + hh + ":" + mm + ":" + ss);
 	return [hh, mm, ss];
 }
 

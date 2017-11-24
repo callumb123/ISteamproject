@@ -6,6 +6,11 @@ body{
 	background-color: #ffdddb;
 }
 
+p {
+ display: inline-block;
+ width: 30%;
+}
+
 #title{
 	font-family: 'Cantarell', sans-serif;
 	font-size: 3.0em;

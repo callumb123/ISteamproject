@@ -23,8 +23,8 @@
 		<div class="container-fluid text-center" id="navBar">
 			<a href="Home.html"><p id="title" class="col-md-2">Fitter Bit</p></a>
 			<div>
-				<form id="uploadForm" method="POST" enctype="multipart/form-data" >
-					<input type="file" onchange="this.form.submit();" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
+				<form id="uploadForm" method="POST" enctype="multipart/form-data">
+					<input type="file" oninput="parseFile('xml/'+document.getElementById('file').value);" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
 					<label for="file" class="col-md-2 btn btn-default">Upload</label>
 				</form>
 				<a class="col-md-2" href="MostRecent.html"><button type="button" class="btn btn-default active">Most Recent</button></a>
@@ -38,28 +38,19 @@
 
 		<div id="map"></div>
 
-		<div class="row text-center" id="firstRowStats">
-			<div class="col-md-2 col-md-offset-1 img-rounded" id="distanceTravelled">Distance: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="startTime">Start Time: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="timeTaken">Time Taken: </div>
-		</div>
-
-		<div class="row text-center" id="secondRowStats">
-			<div class="col-md-2 col-md-offset-1 img-rounded" id="averageSpeed">Average Speed: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="averageCadence">Average Cadence: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="highestCadence">Highest Cadence: </div>
-		</div>
-
-		<div class="row text-center" id="thirdRowStats">
-			<div class="col-md-2 col-md-offset-1 img-rounded" id="highestHeartrate">Highest Heart Rate: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="averageHeartrate">Average Heart Rate: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="lowestHeartrate">Lowest Heart Rate: </div>
-		</div>
-
-		<div class="row text-center" id="fourthRowStats">
-			<div class="col-md-2 col-md-offset-1 img-rounded" id="highestPoint">Highest Point: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="averageElevation">Average Elevation: </div>
-			<div class="col-md-2 col-md-offset-2 img-rounded" id="lowestPoint">Lowest Point: </div>
+		<div class="img-rounded" style = "background-color: white; margin: 15%; text-align: center; margin-top: 5%; font-size: 1.25em; color: #fc4f46; padding: 1.5%; border: 1px solid grey;">
+			<p id="distanceTravelled"></p>
+			<p id="startTime"></p>
+			<p id="timeTaken"></p><br /><br />
+			<p id="averageSpeed"></p>
+			<p id="averageCadence"></p>
+			<p id="highestCadence"></p><br /><br />
+			<p id="highestHeartrate"></p>
+			<p id="averageHeartrate"></p>
+			<p id="lowestHeartrate"></p><br /><br />
+			<p id="highestPoint"></p>
+			<p id="averageElevation"></p>
+			<p id="lowestPoint"></p></div>
 		</div>
 
 		<div class="smallSpace"></div>

@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	parseFile("xml/running.gpx");
 
 });
