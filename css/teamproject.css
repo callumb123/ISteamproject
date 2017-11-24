@@ -83,25 +83,22 @@ body{
 }
 
 .activityListObject{
-    	border: black outset;
+    border: black outset;
 	margin-top: 1em;
 	margin-bottom: 1em;
-    	margin-left: 5em;
-    	margin-right: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
 	padding: 1em;
 	background-color:white;
 }
 
 .activityListObject img{
-    	margin-top: 15%;
+    margin-top: 15%;
 }
 
 #activityListStats div{
-	padding-bottom: 1em;
-	margin-bottom: 2em;
 	font-size: 1.5em;
 	padding-top: 1em;
-    	border: black outset;
 	background-color: white;
 	color: #fc4f46;
 	font-weight: bold;
