@@ -1,6 +1,6 @@
 // Displays the highest, lowest and average heartrate from the data
 function displayHeartrate(allHeartrates, totalHeartrate){
-	if(totalHeartrate == 0){
+	if(totalHeartrate == 0 || isNaN(totalHeartrate)){
 		$("#highestHeartrate").html("<b>Highest heart rate recorded:</b> <br/>N/A");
 		$("#lowestHeartrate").html("<b>Lowest heart rate recorded:</b> <br/>N/A");
 		$("#averageHeartrate").html("<b>Average heart rate:</b> <br/>N/A");
@@ -27,7 +27,7 @@ function displayElevation(elevations, totalElevation){
 
 // Displays the highest and average cadence from the gpx file
 function displayCadence(allCadence, totalCadence){
-	if(totalCadence == 0){
+	if(totalCadence == 0 || isNaN(totalCadence)){
 		$("#highestCadence").html("<b>Highest cadence:</b> <br/>N/A");
 		$("#averageCadence").html("<b>Average cadence:</b> <br/>N/A");
 	}
