@@ -45,7 +45,6 @@ p {
 	font-size: 1.5em;
 	background-color: white;
 	color: #fc4f46;
-	font-weight: bold;
 }
 
 #secondRowStats div{
@@ -58,7 +57,6 @@ p {
 	font-size: 1.5em;
 	background-color: white;
 	color: #fc4f46;
-	font-weight: bold;
 }
 
 #thirdRowStats div{
@@ -71,7 +69,6 @@ p {
 	font-size: 1.5em;
 	background-color: white;
 	color: #fc4f46;
-	font-weight: bold;
 }
 
 #fourthRowStats div{
@@ -84,7 +81,6 @@ p {
 	font-size: 1.5em;
 	background-color: white;
 	color: #fc4f46;
-	font-weight: bold;
 }
 
 .activityListObject{
@@ -106,7 +102,6 @@ p {
 	padding-top: 1em;
 	background-color: white;
 	color: #fc4f46;
-	font-weight: bold;
 }
 
 .bg-primary{

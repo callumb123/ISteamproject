@@ -20,7 +20,7 @@ function parseFile(file){
     dataType: "xml",
     success: function(data){
 	var name = $(data).find('trk name').text();
-  	$("#name").append('<u>' + name + '</u>');
+  	$("#name").append('<u><b>' + name + '</b></u>');
 	var pointNumber = 1;
 	var previousLat;
 	var previousLon;
@@ -63,10 +63,10 @@ function parseFile(file){
 		allTimes.push(actualTime);
 	});
 
-	if(totalHeartrate > 0) displayHeartrate(allHeartrates, totalHeartrate);
+	displayHeartrate(allHeartrates, totalHeartrate);
 	displayDistance(totalDistance);
 	displayElevation(elevations, totalElevation)
-	if(totalCadence > 0) displayCadence(allCadence, totalCadence)
+	displayCadence(allCadence, totalCadence)
 	var time = calculateTimes(allDates, allTimes)
 	displaySpeed(time[0], time[1], time[2], totalDistance);
 	initMap(allPoints);
