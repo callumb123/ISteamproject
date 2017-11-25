@@ -24,7 +24,7 @@
 			<a href="Home.html"><p id="title" class="col-md-2">Fitter Bit</p></a>
 			<div>
 				<form id="uploadForm" method="POST" enctype="multipart/form-data">
-					<input type="file" oninput="parseFile('xml/'+document.getElementById('file').value);" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
+					<input type="file" oninput="parseFile('xml/'+document.getElementById('file').value.split(/(\\|\/)/g).pop());" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
 					<label for="file" class="col-md-2 btn btn-default">Upload</label>
 				</form>
 				<a class="col-md-2" href="MostRecent.html"><button type="button" class="btn btn-default active">Most Recent</button></a>
