@@ -3,7 +3,7 @@
 }
 
 body{
-	background-color: #ffdddb;
+	background-color: #66CCFF;
 }
 
 p {
@@ -13,9 +13,9 @@ p {
 
 #title{
 	font-family: 'Cantarell', sans-serif;
-	font-size: 3.0em;
+	font-size: 3.2em;
 	padding-left:  0.5em;
-	color: #fc4f46;
+	color: white;
 	text-shadow: 1px 3px 2px black;
 }
 
@@ -26,11 +26,12 @@ p {
 #navBar button{
 	font-size: 150%;
 	width: 100%;
-	color: #fc4f46;
+	color: #0099CC;
+	border: 1px solid #0099CC;
 }
 
 #navBar button:hover{
-	background-color: #fc4f46;
+	background-color: #0099CC;
 	color: white;
 }
 
@@ -40,11 +41,11 @@ p {
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    border: black solid;
+    border: #0099CC solid;
 	border-style: outset;
 	font-size: 1.5em;
 	background-color: white;
-	color: #fc4f46;
+	color: #003399;
 }
 
 #secondRowStats div{
@@ -52,11 +53,11 @@ p {
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: black solid;
+    	border: #0099CC solid;
 	border-style: outset;
 	font-size: 1.5em;
 	background-color: white;
-	color: #fc4f46;
+	color: #003399;
 }
 
 #thirdRowStats div{
@@ -64,11 +65,11 @@ p {
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: black solid;
+    	border: #0099CC solid;
 	border-style: outset;
 	font-size: 1.5em;
 	background-color: white;
-	color: #fc4f46;
+	color: #003399;
 }
 
 #fourthRowStats div{
@@ -76,15 +77,15 @@ p {
 	margin-bottom: 1.5em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-    	border: black solid;
+    	border: #0099CC solid;
 	border-style: outset;
 	font-size: 1.5em;
 	background-color: white;
-	color: #fc4f46;
+	color: #003399;
 }
 
 .activityListObject{
-    border: black outset;
+    border: #0099CC outset;
 	margin-top: 1em;
 	margin-bottom: 1em;
     margin-left: 5em;
@@ -101,16 +102,16 @@ p {
 	font-size: 1.5em;
 	padding-top: 1em;
 	background-color: white;
-	color: #fc4f46;
+	color: #003399;
 }
 
 .bg-primary{
-	background-color: #fc4f46;
+	background-color: #0099CC;
 }
 
 .text-main{
 	font-size:3em;
-	color: #fc4f46;
+	color: #0099CC;
 	font-family: 'Cantarell', sans-serif;
 	text-shadow: 1px 3px 2px black;
 }
@@ -120,7 +121,7 @@ p {
 	color: white;
 	font-family: 'Cantarell', sans-serif;
     padding-top: 2em;
-	background-color: #fc4f46;
+	background-color: #0099CC;
 }
 
 .main {
@@ -195,11 +196,13 @@ opacity: 1;
 
 .inputfile + label{
 	font-size: 150%;
-	color: #fc4f46;
+	color: #0099CC;
 	background-color: white;
+	border: 1px solid #0099CC;
 }
 
 .inputfile + label:hover{
-	background-color: #fc4f46;
+	background-color: #0099CC;
 	color: white;
+	border: 1px solid #0099CC;
 }
