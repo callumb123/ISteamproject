@@ -35,55 +35,6 @@ p {
 	color: white;
 }
 
-
-#firstRowStats div{
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-    border: #0099CC solid;
-	border-style: outset;
-	font-size: 1.5em;
-	background-color: white;
-	color: #003399;
-}
-
-#secondRowStats div{
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-    	border: #0099CC solid;
-	border-style: outset;
-	font-size: 1.5em;
-	background-color: white;
-	color: #003399;
-}
-
-#thirdRowStats div{
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-    	border: #0099CC solid;
-	border-style: outset;
-	font-size: 1.5em;
-	background-color: white;
-	color: #003399;
-}
-
-#fourthRowStats div{
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-top: 1em;
-	padding-bottom: 1em;
-    	border: #0099CC solid;
-	border-style: outset;
-	font-size: 1.5em;
-	background-color: white;
-	color: #003399;
-}
-
 .activityListObject{
     border: #0099CC outset;
 	margin-top: 1em;
