@@ -21,16 +21,12 @@
 		<div class="tinySpace"></div>
 
 		<div class="container-fluid text-center" id="navBar">
-			<a href="Home.html"><p id="title" class="col-md-2">Fitter Bit</p></a>
+			<a href="Home.html"><p id="title" class="col-md-3">Fitter Bit</p></a>
 			<div>
-				<form id="uploadForm" method="POST" enctype="multipart/form-data">
-					<input type="file" oninput="parseFile('xml/'+document.getElementById('file').value.split(/(\\|\/)/g).pop());" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
-					<label for="file" class="col-md-2 btn btn-default">Upload</label>
-				</form>
-				<a class="col-md-2" href="MostRecent.html"><button type="button" class="btn btn-default active">Most Recent</button></a>
-		      	<a class="col-md-2" href="YourActivities.html"><button type="button" class="btn btn-default">Your Activities</button></a>
-		      	<a class="col-md-2" href="FriendsActivities.html"><button type="button" class="btn btn-default">Friends Activities</button></a>
-		      	<a class="col-md-2" href="YourStats.html"><button type="button" class="btn btn-default">Your Stats</button></a>
+				<a class="col-md-2" href="MostRecent.html"><button type="button" class="btn btn-default">Most Recent</button></a>
+			    	<a class="col-md-2" href="YourActivities.html"><button type="button" class="btn btn-default">Your Activities</button></a>
+			    	<a class="col-md-2" href="FriendsActivities.html"><button type="button" class="btn btn-default">Friends Activities</button></a>
+			    	<a class="col-md-2" href="YourStats.html"><button type="button" class="btn btn-default">Your Stats</button></a>
 			</div>
 		</div>
 
@@ -38,7 +34,14 @@
 
 		<div id="map"></div>
 
-		<div class="img-rounded" style = "background-color: white; margin: 15%; text-align: center; margin-top: 5%; font-size: 1.25em; color: #003399; padding: 1.5%; border: #0099CC outset;">
+		<div class="tinySpace"></div>
+
+			<form id="uploadForm" method="POST" enctype="multipart/form-data">
+				<input type="file" oninput="parseFile('xml/'+document.getElementById('file').value.split(/(\\|\/)/g).pop());" accept=".gpx" action="xml/" name="file" id="file" class="inputfile" />
+				<label for="file" class="col-md-2 col-md-offset-5 btn btn-default">Upload</label>
+			</form>
+
+		<div class="img-rounded" style = "background-color: white; margin-left: 15%; margin-right: 15%; margin-bottom: 0%; text-align: center; margin-top: 3.8%; font-size: 1.25em; color: #003399; padding: 1.5%; border: #0099CC outset;">
 			<p id="distanceTravelled"></p>
 			<p id="startTime"></p>
 			<p id="timeTaken"></p><br /><br />
@@ -53,7 +56,6 @@
 			<p id="lowestPoint"></p></div>
 		</div>
 
-		<div class="smallSpace"></div>
 
 	</body>
 
